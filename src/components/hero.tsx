@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           I build visually stunning web experiences using Next.js, TypeScript, and Three.js.
         </p>
 
-        {/* 🎯 Customize your buttons and links here */}
+        {/* Customize your buttons and links here */}
         <div className="flex justify-center md:justify-start space-x-6 pt-6">
           <a
             href="#projects"

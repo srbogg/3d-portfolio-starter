@@ -2,12 +2,12 @@
 
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stage } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-// Lazy-load the wizard model to improve performance
-const WizardModel = dynamic(() => import("./wizardModel"), { ssr: false });
+// Lazy-load the model to improve performance
+const Model = dynamic(() => import("./model"), { ssr: false });
 
 const Scene: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const Scene: React.FC = () => {
 
         {/* Load your 3D model here */}
         <Suspense fallback={null}>
-          <WizardModel />
+          <Model />
         </Suspense>
 
         {/* Lets you drag to rotate your model (zoom disabled for cleaner look) */}
