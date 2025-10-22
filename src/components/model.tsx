@@ -10,7 +10,6 @@ const Model: React.FC = () => {
   const { scene } = useGLTF("/models/cute_spooky_cat.glb");
   
   const modelRef = useRef<THREE.Object3D | null>(null);
-
   // Animate the model each frame
   useFrame(() => {
     if (modelRef.current) {
@@ -19,7 +18,10 @@ const Model: React.FC = () => {
   });
 
   // Adjust scale, position, and rotation if your model looks too big or too small or not at the right angle.
-  return <primitive ref={modelRef} object={scene} scale={2.2} position={[0, -1.5, -2]} rotation={[0, Math.PI / 2, 0]} />;
+  // For position: 
+  // Adjust x for left/right: negative = left, positive = right
+  // Adjust y for up/down: negative = down, positive = up
+  return <primitive ref={modelRef} object={scene} scale={2.2} position={[-1, -0.5, -2]} rotation={[0, Math.PI / 2, 0]} />;
 };
 
 export default Model;

@@ -18,13 +18,17 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert(`Thanks ${formData.name}, your message has been sent!`);
+    // TODO: Replace this with actual form submission logic (e.g., emailjs, API route)
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-black text-white px-8 md:px-16 py-24">
+    <section 
+      id="contact" 
+      className="min-h-screen bg-black text-white px-8 md:px-16 py-24"
+    >
       <ScrollReveal>
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Get In <span className="text-[#04D9FF]">Touch</span>
+          get in <span className="text-[#04D9FF]">touch</span>
         </h2>
       </ScrollReveal>
 
@@ -63,7 +67,7 @@ const ContactForm: React.FC = () => {
             type="submit"
             className="w-full py-3 bg-[#04D9FF] text-black font-semibold rounded-lg hover:bg-[#00BFFF] transition-all"
           >
-            Send Message
+            send message
           </motion.button>
         </motion.form>
       </ScrollReveal>
