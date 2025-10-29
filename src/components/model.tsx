@@ -7,7 +7,7 @@ import * as THREE from 'three';
 
 const Model: React.FC = () => {
   // This loads your model from the public/models folder.
-  const { scene } = useGLTF("/models/cute_spooky_cat.glb");
+  const { scene } = useGLTF("/models/pato_fallguys.glb");
   
   const modelRef = useRef<THREE.Object3D | null>(null);
   // Animate the model each frame
@@ -21,7 +21,7 @@ const Model: React.FC = () => {
   // For position: 
   // Adjust x for left/right: negative = left, positive = right
   // Adjust y for up/down: negative = down, positive = up
-  return <primitive ref={modelRef} object={scene} scale={2.2} position={[-1, -0.5, -2]} rotation={[0, Math.PI / 2, 0]} />;
+  return <primitive ref={modelRef} object={scene} scale={0.5} position={[-1, -0.5, -2]} rotation={[0, Math.PI / 2, 0]} />;
 };
 
 export default Model;

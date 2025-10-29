@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       >
         {/* Replace your name here */}
         <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-          hi, i&apos;m <span className="text-[#04D9FF]">your name</span>
+          hi, i&apos;m <span className="text-[#04D9FF]">Sriya Boggavarapu</span>
         </h1>
 
         {/* Replace your role or title here */}
